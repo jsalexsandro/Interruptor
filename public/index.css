@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    font-family: monospace;
+}
+
+::-webkit-input-placeholder {
+    color: #333;
+}
+
+div {
+    width: 100vw;
+    height: 40vh;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    background-color: #333;
+    width: 20vw;
+    height: 20vh;
+    border-radius: 20px;
+    margin-left: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#label {
+    display: none;
+}
+
+input {
+    width: 65vw;
+    height: 20vh;
+    outline: none;
+    border: 0;
+    border-radius: 20px;
+    text-indent: 20px;
+    font-size: 40px;
+    color: #333;
+}
+
+main {
+    width: 100vw;
+    height: 60vh;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    width: 90vw;
+    height: 20vh;
+    border: 0;
+    border-radius: 20px;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0px 10px 10px #333;
+}
+
+button:nth-child(1){
+    background-color: lime;
+}
+button:nth-child(2){
+    background-color: rgb(255, 35, 35);
+}
+
+button:hover{
+    background-color: rgb(0, 211, 0);
+}
+button:hover:nth-child(2){
+    background-color: rgb(252, 11, 11);
+}
+
+
+#app {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    width: 100vw;
+    height: 100vh;
+    transition: 1s;
+    background-color: crimson;
+    color: #fff;
+}
+

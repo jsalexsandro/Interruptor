@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interruptor</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div id="header">
+        <p id="label" ></p>
+        <input id="value" placeholder="0000" type="text">
+        <a id="lamp">
+            Lamp
+        </a>
+    </div>
+    <main id="on-off">
+        <button id="btn1">On</button>
+        <button id="btn2">Off</button>
+    </main>
+    <section id="app">
+        <h1 id="text">
+            Esperando conexão
+        </h1>
+    </section>
+    <script>
+        const button = document.getElementById("lamp")
+        button.addEventListener("click",( ) => {
+            let port = String(document.getElementById("value").value).trim()
+            if (port != ""){
+                const lb = document.getElementById("label")
+                lb.innerText = port
+                const main = document.getElementById("on-off")
+                main.style.display = "none"
+                const header = document.getElementById("header")
+                header.style.display = "none"
+
+                const app = document.getElementById("app")
+                app.style.display = "flex"
+            }
+        })
+    </script>
+    <script src="io.js"></script>
+</body>
+</html>
